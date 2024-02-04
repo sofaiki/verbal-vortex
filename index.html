@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Verbal Vortex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Starting Page -->
+    <div class="start-page">
+      <h1>Welcome to Verbal Vortex</h1>
+      <p>Verbal Vortex is inspired by the classic word-guessing game hangman, 
+        in which one player thinks of a word and the other player attempts 
+        to guess it letter by letter. The goal is to guess the word before 
+        your guesses are completely gone. It's a quick and engaging challenge 
+        that tests your vocabulary and deduction abilities.</p>
+      <button class="start-btn" onclick="startGame()">Start Game</button>
+      <footer>
+        <p>&copy; Verbal Vortex 2024 • Sofia Ubas, Arabela Flores, Ralph Matthew Nierva, John Gabriel Tadeo, Marc Germine Ganan</p>
+      </footer>
+    </div>
+    <div class="content" style="display: none;">
+      <h1>Guess the Word</h1>
+      <input type="text" class="typing-input" maxlength="1">
+      <div class="inputs"></div>
+      <div class="details">
+        <h2 class="hint">Hint: <span></span></p>
+        <div class="keyboard" id="virtual-keyboard">
+          <div class="keyboard-row">
+            <button class="key" onclick="pressKey('q')">Q</button>
+            <button class="key" onclick="pressKey('w')">W</button>
+            <button class="key" onclick="pressKey('e')">E</button>
+            <button class="key" onclick="pressKey('r')">R</button>
+            <button class="key" onclick="pressKey('t')">T</button>
+            <button class="key" onclick="pressKey('y')">Y</button>
+            <button class="key" onclick="pressKey('u')">U</button>
+            <button class="key" onclick="pressKey('i')">I</button>
+            <button class="key" onclick="pressKey('o')">O</button>
+            <button class="key" onclick="pressKey('p')">P</button>
+          </div>
+          <div class="keyboard-row">
+            <button class="key" onclick="pressKey('a')">A</button>
+            <button class="key" onclick="pressKey('s')">S</button>
+            <button class="key" onclick="pressKey('d')">D</button>
+            <button class="key" onclick="pressKey('f')">F</button>
+            <button class="key" onclick="pressKey('g')">G</button>
+            <button class="key" onclick="pressKey('h')">H</button>
+            <button class="key" onclick="pressKey('j')">J</button>
+            <button class="key" onclick="pressKey('k')">K</button>
+            <button class="key" onclick="pressKey('l')">L</button>
+          </div>
+          <div class="keyboard-row">
+            <button class="key" onclick="pressKey('z')">Z</button>
+            <button class="key" onclick="pressKey('x')">X</button>
+            <button class="key" onclick="pressKey('c')">C</button>
+            <button class="key" onclick="pressKey('v')">V</button>
+            <button class="key" onclick="pressKey('b')">B</button>
+            <button class="key" onclick="pressKey('n')">N</button>
+            <button class="key" onclick="pressKey('m')">M</button>
+          </div>
+        </div>
+        <p class="guess-left">Remaining guesses: <span></span></p>
+        <p class="clues-left">Clues Left: <span>3</span></p>
+        <p class="score">Points: <span></span></p>
+        <p class="wrong-letter">Wrong letters: <span></span></p>
+        <p class="difficulty">Difficulty:<span></span></p>
+        
+      </div>
+      <button class="clue-btn consonant-clue-btn">Clue Consonant (-25 points)</button>
+      <button class="clue-btn vowel-clue-btn">Clue Vowel (-25 points)</button>
+      <button class="reset-btn">Reset Game</button>
+      
+      
+    </div>
+  </div>
+
+  <script src="js/words.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    function startGame() {
+      document.querySelector('.start-page').style.display = 'none';
+      document.querySelector('.content').style.display = 'block';
+      randomWord(); // Start the game when the button is clicked
+    }
+
+    function pressKey(key) {
+      document.querySelector('.typing-input').value = key;
+      initGame({ target: { value: key } });
+    }
+  </script>
+</body>
+
+</html>
