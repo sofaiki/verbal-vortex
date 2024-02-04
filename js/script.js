@@ -61,29 +61,27 @@ function initGame(e) {
 
   setTimeout(() => {
     if (correctLetters.length === word.length) {
-        score += 10; // Increase score by 10 for each correct word
-        scoreDisplay.innerText = score;
-        alert(`Congrats! You guessed the word ${word.toUpperCase()}\nScore: ${score}`);
-        questionCounter++;
+      score += 10;
+      scoreDisplay.innerText = score;
+      alert(`Congrats! You guessed the word ${word.toUpperCase()}\nScore: ${score}`);
+      questionCounter++;
   
-        if (questionCounter >= 10) {
-          // Change difficulty after answering 10 questions correctly
-          changeDifficulty();
-          questionCounter = 0; // Reset the counter
-        }
-  
-        return randomWord();
-      } else if (maxGuesses < 1) {
-        alert(`Game over! You don't have remaining guesses.\nScore: ${score}`);
-        for (let i = 0; i < word.length; i++) {
-          inputs.querySelectorAll("input")[i].value = word[i];
-        }
-        // Reset score
-        score = 0;
-        scoreDisplay.innerText = score;
+      if (questionCounter >= 10) {
+        changeDifficulty();
+        questionCounter = 0;
       }
-    }, 100);
-  }
+  
+      return randomWord();
+    } else if (maxGuesses < 1) {
+      alert(`Game over! You don't have remaining guesses.\nScore: ${score}`);
+      for (let i = 0; i < word.length; i++) {
+        inputs.querySelectorAll("input")[i].value = word[i];
+      }
+      score = 0;
+      scoreDisplay.innerText = score;
+    }
+  }, 100);
+
   function changeDifficulty() {
     // Implement the logic to change the difficulty level here
     // For example, you can choose the next difficulty from a predefined list
@@ -98,7 +96,9 @@ function initGame(e) {
     }
   
     difficultyParagraph.innerText = currentDifficulty; // Update the difficulty display
-  }
+  }}
+
+  
 const cluesLeftContainer = document.querySelector(".clues-left span");
 let clueUses = 0; // Add this variable to keep track of clue uses
 
@@ -145,12 +145,7 @@ function useClue(clueType) {
           }
         }
     }
-  
 
-    
-  
-  
-  
   // Helper function to check if a character is a vowel
 function isVowel(char) {
     return ['a', 'e', 'i', 'o', 'u'].includes(char.toLowerCase());
@@ -162,11 +157,6 @@ const vowelClueBtn = document.querySelector(".vowel-clue-btn");
 
 consonantClueBtn.addEventListener("click", () => useClue("consonant"));
 vowelClueBtn.addEventListener("click", () => useClue("vowel"));
-
-// ... (Your existing code)
-
-
-
 resetBtn.addEventListener("click", randomWord);
 typingInput.addEventListener("input", initGame);
 inputs.addEventListener("click", () => typingInput.focus());

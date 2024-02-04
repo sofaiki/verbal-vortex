@@ -31,7 +31,7 @@ let wordList = [
     },
     {
         word: "apple",
-        hint: "tech company known for iPhones",
+        hint: "Tech company known for iPhones",
         difficulty: "Easy"
     },
     {
@@ -49,36 +49,106 @@ let wordList = [
         hint: "What is the largest continent on Earth?",
         difficulty: "Easy"
     },
+
     {
-        word: "golang",
-        hint: "programming language",
+        word: "function",
+        hint: "What word is often abbreviated as Fn on a keyboard?",
         difficulty: "Medium"
     },
     {
-        word: "coding",
-        hint: "related to programming",
+        word: "microsoft",
+        hint: "What company developed the Windows operating system?",
         difficulty: "Medium"
     },
     {
-        word: "matrix",
-        hint: "science fiction movie",
+        word: "adalovelace",
+        hint: "Who is the first computer programmer?",
         difficulty: "Medium"
     },
-    // ... (Other words with their respective difficulty levels)
     {
-        word: "joker",
-        hint: "psychological thriller film",
+        word: "markone",
+        hint: "What is the name of World's first digital Computer?",
+        difficulty: "Medium"
+    },
+    {
+        word: "pixel",
+        hint: "What do you call a single point on a computer screen?",
+        difficulty: "Medium"
+    },
+    {
+        word: "worldwideweb",
+        hint: "The first web browser invented in 1990",
+        difficulty: "Medium"
+    },
+    {
+        word: "creepervirus",
+        hint: "The first computer virus",
+        difficulty: "Medium"
+    },
+    {
+        word: "security",
+        hint: "Firewall in computer is used for",
+        difficulty: "Medium"
+    },
+    {
+        word: "facebook",
+        hint: "Mark Zuckerberg is the owner of",
+        difficulty: "Medium"
+    },
+    {
+        word: "chrome",
+        hint: "Which web browser is developed by the Google",
+        difficulty: "Medium"
+    },
+    
+    {
+        word: "washington",
+        hint: "Where is the headquter of Microsoft office located?",
         difficulty: "Hard"
     },
     {
-        word: "dubai",
-        hint: "developed country name",
+        word: "ibm",
+        hint: "Computer Hard Disk was first introduced in 1956 by..",
         difficulty: "Hard"
     },
     {
-        word: "photo",
-        hint: "representation of a person or scene",
+        word: "binary",
+        hint: "A computer use which type of number system to calculate and to store data",
         difficulty: "Hard"
     },
-    // ... (Other words with their respective difficulty levels)
+    {
+        word: "interface",
+        hint: "A common boundary between two computer systems is known as",
+        difficulty: "Hard"
+    },
+    {
+        word: "seven",
+        hint: "Number of layers in OSI Model",
+        difficulty: "Hard"
+    },
+    {
+        word: "archie",
+        hint: "The first search engine is known as",
+        difficulty: "Hard"
+    },
+    {
+        word: "java",
+        hint: "Programming language used to create programs like applet",
+        difficulty: "Hard"
+    },
+    {
+        word: "malware",
+        hint: "Trojan refer to as",
+        difficulty: "Hard"
+    },
+    {
+        word: "assembler",
+        hint: "What computer program converts assembly language to machine language",
+        difficulty: "Hard"
+    },
+    {
+        word: "heart",
+        hint: "The System unit is referred to as the..",
+        difficulty: "Hard"
+    },
 ];
